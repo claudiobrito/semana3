@@ -1,6 +1,99 @@
-*.class
+class Integers{
+  
+	
+    static int Max(int a, int b){
+    if (a > b) return a;
+    else return b;
+}
 
-# Package Files #
-*.jar
-*.war
-*.ear
+    
+    static int Abs(int a){
+    if (a<0) return (a*(-1));
+    else return a;
+}
+    
+    
+    static boolean IsMultiple(int a, int b){
+    if (a % b == 0) return true;
+    else return false;
+}
+
+
+    static int Divisao(int a, int b){
+    int c = 0;
+    while (a>=b){
+        a = a-b;
+        c = c+1;
+     
+} return c;
+}
+    
+    
+    static int PowerOfTwo(int a){
+    int m=1;
+    int i=0;
+    while (i<a) {
+    m = m*2;
+   	i = i+1;	
+    }
+    return m;}
+
+    static int sumNaturalsUpTo(int a){
+    	int contador = 0;
+        int resultado = a;
+    			while(a>contador){
+    				resultado = resultado + contador;
+    						contador = contador + 1;}
+    						return resultado;
+    			}
+    	
+    	
+    static int sumEvenNumbersBetween (int a, int b){
+    	int m=0;
+		int n=0;
+		while (a<=b){
+			if (a%2==0){
+				m=a;
+				m=m+n;
+				n=m;
+			}			
+			a=a+1;
+		}
+		return m;
+	}
+    
+    static int FirstDigit(int a){
+		while (a>=10){
+			a= a/10;
+		}
+		return (int) a;
+	}
+	
+    static int nFibonacci(int n){
+    if (n<=1)
+    	return n;
+    
+    int a = 0;
+    int b = 1;
+    int f = a+b;
+    int i = 2;
+    while (i != n ){
+    	f = b + f;
+    	a = b;
+    	i = i + 1;
+    }
+    return f;
+    	
+    }
+    
+    static int gcd(int m, int n) {
+		int a = m;
+		int b = n;
+		while(a % b != 0) {
+			int c = a % b;
+			a = b;
+			b = c;
+		}
+		return b;
+	}
+}
